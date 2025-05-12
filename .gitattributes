@@ -1,2 +1,3 @@
-*.sql linguist-language=SQL  
+*.sql linguist-language=SQL 
 *.tex linguist-documentation 
+*.db linguist-vendored 
