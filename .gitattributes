@@ -1,2 +1,2 @@
-"*.sql linguist-language=SQL" 
-"*.md linguist-documentation" 
+*.sql linguist-language=SQL
+*.md linguist-documentation
