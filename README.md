@@ -17,25 +17,24 @@ def forecast_sales(df):
 
 
 🚀 Key Features
-Feature	Implementation
-Multi-table SQL Analytics	10+ complex queries with joins
-Sales Forecasting	Facebook Prophet (60-day horizon)
-Customer Segmentation	K-means clustering (4 segments)
-Inventory Optimization	Turnover rate calculations
-Interactive Dashboard	6-page Streamlit UI
+Feature	                                 Implementation
+Multi-table SQL Analytics	            10+ complex queries with joins
+Sales Forecasting	                    Facebook Prophet (60-day horizon)
+Customer Segmentation	                K-means clustering (4 segments)
+Inventory Optimization	                Turnover rate calculations
+Interactive Dashboard	                6-page Streamlit UI
+
+
 🛠 Tech Stack
-
-
 Core:
-
 Python 3.9 (Pandas, NumPy)
 
 SQLite (50K+ records)
 
 Streamlit (Dashboard)
 
-ML:
 
+ML:
 Prophet 1.1.1 (Forecasting)
 
 scikit-learn 1.2.2 (Clustering)
@@ -45,6 +44,7 @@ Viz:
 Plotly (Interactive charts)
 
 Matplotlib (Static visuals)
+
 
 📂 Project Structure
 Retail_Analytics_System/
@@ -57,7 +57,6 @@ Retail_Analytics_System/
 
 
 ⚡ Quick Start
-
 Clone & Setup:
 git clone https://github.com/arif05khan/Retail-Analytics-System.git
 cd Retail-Analytics-System
@@ -81,6 +80,9 @@ FROM Sales
 GROUP BY CustomerID
 ORDER BY LTV DESC
 LIMIT 10;
+
+
+
 🤖 Machine Learning
 Prophet Forecasting:
 
@@ -96,6 +98,7 @@ python
 kmeans = KMeans(n_clusters=4)
 customer_agg['Cluster'] = kmeans.fit_predict(scaled_data)
 
+
 📊 Sample Outputs
 Dashboard Pages:
 
@@ -110,6 +113,7 @@ Inventory Health
 Top Customers
 
 Data Export
+
 
 🚨 Troubleshooting
 Common Issues:
