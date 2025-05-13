@@ -36,31 +36,29 @@ GitHub: For version control and hosting the project.
 
 How to Set It Up
 If you want to run this project locally, here’s how to get started. I’ve tested this on Windows, but it should work on other systems too with minor tweaks.
-
-Clone the Repository:
+Step 1: Clone the Repository
 git clone https://github.com/arif05khan/Comprehensive_Retail_Analytics_and_Forecasting_System.git
 cd Comprehensive_Retail_Analytics_and_Forecasting_System/Retail_Analytics_System
 
-
-Set Up a Virtual Environment:
+Step 2: Set Up a Virtual Environment
 python -m venv venv
 venv\Scripts\activate  # On Windows
 
-
-Install the Dependencies:I’ve included a requirements.txt file with all the packages you’ll need.
+Step 3: Install the Dependencies
+I’ve included a requirements.txt file with all the packages you’ll need.
 pip install -r requirements.txt
 
-
-Install CmdStan for Prophet:Prophet needs CmdStan for forecasting, so let’s set that up.
+Step 4: Install CmdStan for Prophet
+Prophet needs CmdStan for forecasting, so let’s set that up.
 python -m cmdstanpy.install_cmdstan --version 2.36.0
 
-
-Set the CMDSTAN Environment Variable:On Windows, you’ll need to tell Prophet where CmdStan is.
+Step 5: Set the CMDSTAN Environment Variable
+On Windows, you’ll need to tell Prophet where CmdStan is.
 set CMDSTAN=C:\Users\Arif Rasul Khan\.cmdstan\cmdstan-2.36.0
 
 Replace Arif Rasul Khan with your Windows username.
-
-Set Up the Database:I’ve included a script to create and populate the SQLite database.
+Step 6: Set Up the Database
+I’ve included a script to create and populate the SQLite database.
 python setup_database.py
 
 You can also use the SQL files directly:
@@ -68,13 +66,11 @@ You can also use the SQL files directly:
 schema.sql: Creates the database tables.
 seed_data.sql: Adds sample data.
 
-
-Run the Streamlit App:Now you’re ready to launch the dashboard!
+Step 7: Run the Streamlit App
+Now you’re ready to launch the dashboard!
 streamlit run app.py
 
 Open http://localhost:8501 in your browser, and you’ll see the dashboard in action.
-
-
 What’s in the Project?
 Here’s a quick look at the files in the repository:
 
@@ -90,6 +86,7 @@ data/historical_sales.csv: Sample sales data for forecasting.
 docs/database_schema.md: Documentation of the database tables and structure.
 docs/usage_guide.md: A guide on how to use the app.
 requirements.txt: List of Python packages needed.
+LICENSE: MIT License for the project.
 
 Database Schema
 I’ve documented the database structure in docs/database_schema.md. It includes four main tables:
@@ -99,18 +96,16 @@ Customers: 1,000 records with customer info (CustomerID, Age, Gender, Region).
 Products: 500 records with product details (ProductID, Category, UnitCost).
 Inventory: 500 records with inventory data (ProductID, StockLevel, RestockDate).
 
-Deployment
-I deployed the dashboard on Streamlit Cloud so anyone can access it online. However, there’s a small issue with the deployment (more on that below), so I recommend running it locally for now. If you run into any issues, let me know—I’m happy to help!
-Challenges I Faced
-Building this project wasn’t always smooth sailing. Here are a few challenges I ran into and how I tackled them:
+
 
 Large Dataset with Complex Joins: Handling 50,000 sales records with SQL joins was slow at first. I added indexes to the database tables and optimized my queries, which made a big difference.
 Streamlit Cloud Compatibility: Getting the app to work on Streamlit Cloud was tricky. I had to specify exact versions for dependencies (like holidays==0.29) and use Python 3.9 to match their runtime.
 Dashboard Complexity vs. Usability: I wanted the dashboard to do a lot, but I didn’t want it to feel overwhelming. I organized it into multiple pages (like sales, customers, inventory) with clear navigation.
 
 
-Screenshots
 
+Screenshots
+I’m still working on adding screenshots of the dashboard. Once I have them, you’ll be able to see the sales trends, customer segments, and inventory alerts in action. For now, imagine a sleek interface with charts for forecasting, customer analysis, and more!
 
 
 References
