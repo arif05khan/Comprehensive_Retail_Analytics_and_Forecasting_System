@@ -159,7 +159,6 @@ Use st.cache_data in Streamlit
 This project is licensed under the **MIT License** with a contact clause.  
 Please contact me if you wish to use, modify, or distribute this software.
 
-
 📬 Contact
 Arif Rasul Khan
 ark396336@gmail.com
