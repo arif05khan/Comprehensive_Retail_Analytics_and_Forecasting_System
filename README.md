@@ -154,6 +154,11 @@ Add indexes to SQL tables
 
 Use st.cache_data in Streamlit
 
+## 📜 License
+
+This project is licensed under the **MIT License** with a contact clause.  
+Please contact me if you wish to use, modify, or distribute this software.
+
 
 📬 Contact
 Arif Rasul Khan
